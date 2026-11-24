@@ -1,0 +1,376 @@
+
+/* =========================================
+   PROJECT DETAIL - TWO COLUMN LAYOUT
+========================================= */
+
+.project-detail,
+.project-detail * {
+  box-sizing: border-box;
+}
+
+.project-detail {
+  width: 100%;
+  height: calc(100vh - 90px);
+  height: calc(100dvh - 90px);
+  padding: 22px 4.2%;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.project-single-screen {
+  width: 100%;
+  max-width: 1500px;
+  height: 100%;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 55% 45%;
+  align-items: center;
+  gap: 0;
+}
+
+/* =========================================
+   LEFT SIDE - CONTENT
+========================================= */
+
+.project-info-panel {
+  grid-column: 1;
+  grid-row: 1;
+
+  width: 100%;
+  min-width: 0;
+  padding-right: 35px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.back-projects-link {
+  display: inline-block;
+  margin-bottom: 17px;
+
+  color: #075bea;
+  font-size: 14px;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.back-projects-link:hover {
+  color: #003fb5;
+}
+
+.project-detail-category {
+  display: inline-block;
+  padding: 9px 17px;
+  margin-bottom: 17px;
+
+  color: #075bea;
+  background: #eaf2ff;
+  border-radius: 25px;
+
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.project-eyebrow {
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 1.7px;
+  margin-bottom: 9px;
+}
+
+.project-info-panel h1 {
+  color: #101d3b;
+  font-size: clamp(28px, 2.6vw, 40px);
+  font-weight: 800;
+  line-height: 1.18;
+  margin: 0 0 15px;
+}
+
+.project-detail-intro {
+  color: #526782;
+  font-size: 16px;
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+
+/* =========================================
+   TECHNOLOGY TAGS
+========================================= */
+
+.project-detail-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 22px;
+}
+
+.project-detail-technologies span {
+  padding: 8px 13px;
+
+  color: #075bea;
+  background: #eff5ff;
+  border: 1px solid #dceaff;
+  border-radius: 22px;
+
+  font-size: 12px;
+  font-weight: 650;
+}
+
+/* =========================================
+   CHALLENGE / APPROACH / RESULTS
+========================================= */
+
+.project-quick-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.quick-detail-item {
+  padding-left: 15px;
+  border-left: 3px solid #b9d5ff;
+}
+
+.quick-detail-item h3 {
+  color: #064fc5;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.quick-detail-item p {
+  color: #425873;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.result-detail {
+  border-left-color: #075bea;
+}
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.project-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 22px;
+}
+
+.project-detail-button {
+  display: inline-block;
+  padding: 13px 20px;
+
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.project-detail-button.primary {
+  color: #ffffff;
+  background: #075bea;
+  border: 1px solid #075bea;
+}
+
+.project-detail-button.primary:hover {
+  background: #0048c7;
+  transform: translateY(-2px);
+}
+
+.project-detail-button.secondary {
+  color: #075bea;
+  background: #ffffff;
+  border: 1px solid #075bea;
+}
+
+.project-detail-button.secondary:hover {
+  background: #eff5ff;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   RIGHT SIDE - IMAGE ONLY
+========================================= */
+
+.project-visual-panel {
+  grid-column: 2;
+  grid-row: 1;
+
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.project-showcase-image {
+  display: block;
+
+  width: 100%;
+  max-height: 72vh;
+  height: auto;
+
+  object-fit: contain;
+  object-position: center;
+
+  border: 1px solid #e5eaf2;
+  border-radius: 7px;
+}
+
+/* =========================================
+   PROJECT NOT FOUND
+========================================= */
+
+.project-not-found {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.back-projects-button {
+  padding: 12px 20px;
+  color: #ffffff;
+  background: #075bea;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/* =========================================
+   SHORTER DESKTOP SCREENS
+========================================= */
+
+@media (min-width: 1001px) and (max-height: 800px) {
+  .project-detail {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .project-info-panel {
+    padding-right: 25px;
+  }
+
+  .back-projects-link {
+    margin-bottom: 10px;
+  }
+
+  .project-detail-category {
+    margin-bottom: 10px;
+    padding: 7px 14px;
+  }
+
+  .project-info-panel h1 {
+    font-size: clamp(26px, 2.3vw, 34px);
+    margin-bottom: 10px;
+  }
+
+  .project-detail-intro {
+    font-size: 14px;
+    margin-bottom: 11px;
+  }
+
+  .project-detail-technologies {
+    gap: 7px;
+    margin-bottom: 14px;
+  }
+
+  .project-detail-technologies span {
+    padding: 6px 10px;
+  }
+
+  .project-quick-details {
+    gap: 10px;
+  }
+
+  .quick-detail-item p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .quick-detail-item h3 {
+    font-size: 11px;
+  }
+
+  .project-detail-actions {
+    margin-top: 15px;
+  }
+
+  .project-detail-button {
+    padding: 10px 15px;
+  }
+}
+
+/* =========================================
+   TABLET AND MOBILE
+========================================= */
+
+@media (max-width: 1000px) {
+  .project-detail {
+    height: auto;
+    min-height: calc(100vh - 90px);
+    overflow: visible;
+    padding: 25px 5% 40px;
+  }
+
+  .project-single-screen {
+    height: auto;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 25px;
+  }
+
+  .project-info-panel {
+    grid-column: 1;
+    grid-row: 2;
+    padding-right: 0;
+  }
+
+  .project-visual-panel {
+    grid-column: 1;
+    grid-row: 1;
+    height: auto;
+  }
+
+  .project-showcase-image {
+    width: 100%;
+    max-height: 420px;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-info-panel h1 {
+    font-size: 29px;
+  }
+
+  .project-detail-intro {
+    font-size: 14px;
+  }
+
+  .project-detail-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .project-detail-button {
+    text-align: center;
+  }
+}

@@ -1,0 +1,255 @@
+
+/* ===================================
+   HERO SECTION
+=================================== */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 80px 8%;
+
+  background: linear-gradient(
+    135deg,
+    #ffffff 60%,
+    #eff6ff 100%
+  );
+}
+
+/* ===================================
+   HERO TWO-COLUMN LAYOUT
+=================================== */
+
+.hero-layout {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.35fr 0.85fr;
+  align-items: center;
+  gap: 55px;
+}
+
+/* ===================================
+   HERO CONTENT
+=================================== */
+
+.hero-content {
+  max-width: 100%;
+  text-align: left;
+}
+
+/* Greeting */
+
+.hero-greeting {
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* Main Heading */
+
+.hero h1 {
+  font-size: clamp(42px, 5vw, 64px);
+  font-weight: 800;
+  color: var(--heading-color);
+  letter-spacing: -2px;
+  margin-bottom: 12px;
+}
+
+/* Professional Tagline */
+
+.hero h2 {
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+}
+
+/* Description */
+
+.hero-description {
+  max-width: 680px;
+  margin-bottom: 30px;
+
+  font-size: 15px;
+  color: var(--text-color);
+  line-height: 1.9;
+}
+
+/* ===================================
+   BUTTONS
+=================================== */
+
+.hero-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: transparent;
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* ===================================
+   SKILL TAGS
+=================================== */
+
+.hero-skills {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hero-skills span {
+  padding: 8px 14px;
+
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 25px;
+
+  color: var(--heading-color);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* ===================================
+   PROFILE IMAGE
+=================================== */
+
+.hero-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 340px;
+  height: 420px;
+
+  object-fit: cover;
+  object-position: center top;
+
+  border-radius: 24px;
+  border: 5px solid #ffffff;
+
+  box-shadow:
+    0 15px 40px rgba(37, 99, 235, 0.13);
+
+  transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+  transform: translateY(-5px);
+}
+
+/* ===================================
+   TABLET RESPONSIVENESS
+=================================== */
+
+@media (max-width: 900px) {
+
+  .hero {
+    padding: 90px 6%;
+  }
+
+  .hero-layout {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 30px;
+  }
+
+  .hero-image {
+    height: 350px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+}
+
+/* ===================================
+   MOBILE RESPONSIVENESS
+=================================== */
+
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: auto;
+    padding: 75px 6%;
+  }
+
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+    letter-spacing: -1px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-skills {
+    justify-content: center;
+  }
+
+  .hero-image-container {
+    grid-row: 1;
+  }
+
+  .hero-image {
+    width: 240px;
+    height: 290px;
+  }
+
+}

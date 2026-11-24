@@ -1,0 +1,142 @@
+
+/* Skills Section */
+
+.skills {
+  padding: 100px 8%;
+  background-color: var(--background-color);
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section Header */
+
+.skills-header {
+  max-width: 750px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.skills-intro {
+  margin-top: 15px;
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Skills Grid */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* Individual Skill Card */
+
+.skill-card {
+  padding: 30px;
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-color);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.07);
+}
+
+/* Card Number */
+
+.skill-card-number {
+  color: var(--primary-color);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+/* Card Heading */
+
+.skill-card h3 {
+  color: var(--heading-color);
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Card Description */
+
+.skill-card-description {
+  color: var(--text-color);
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* Skill Tags */
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 7px 12px;
+
+  background-color: var(--light-background);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+
+  color: var(--heading-color);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Tablet Layout */
+
+@media (max-width: 900px) {
+  .skills {
+    padding: 80px 6%;
+  }
+
+  .skills-grid {
+    gap: 18px;
+  }
+
+  .skill-card {
+    padding: 24px;
+  }
+}
+
+/* Mobile Layout */
+
+@media (max-width: 600px) {
+  .skills {
+    padding: 70px 6%;
+  }
+
+  .skills-header {
+    margin-bottom: 35px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-card {
+    padding: 22px;
+  }
+
+  .skills-intro {
+    font-size: 15px;
+  }
+}
